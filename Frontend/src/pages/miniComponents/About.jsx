@@ -7,7 +7,7 @@ const About = () => {
   useEffect(()=>{
       const fetchUser=async()=>{
           try {
-              const {data} = await axios.get("http://localhost:4000/api/v1/user/me/portfolio",{withCredentials:true});
+              const {data} = await axios.get("https://dynamic-portfolio-backend-essm.onrender.com/api/v1/user/me/portfolio",{withCredentials:true});
               setUser(data.user);
           } catch (error) {
               console.log(error);

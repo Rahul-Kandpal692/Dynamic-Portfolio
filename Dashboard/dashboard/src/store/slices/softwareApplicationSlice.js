@@ -75,7 +75,7 @@ const softwareApplicationSlice = createSlice({
     );
     try {
       const {data} = await axios.get(
-        "http://localhost:4000/api/v1/softwareApplication/getall",
+        "https://dynamic-portfolio-backend-essm.onrender.com/api/v1/softwareApplication/getall",
         { withCredentials: true }
       );
       dispatch(
@@ -100,7 +100,7 @@ const softwareApplicationSlice = createSlice({
     );
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/softwareApplication/add",
+        "https://dynamic-portfolio-backend-essm.onrender.com/api/v1/softwareApplication/add",
         data,
         {
           withCredentials: true,
@@ -129,7 +129,7 @@ const softwareApplicationSlice = createSlice({
     );
     try {
       const response = await axios.delete(
-        `http://localhost:4000/api/v1/softwareApplication/delete/${id}`,
+        `https://dynamic-portfolio-backend-essm.onrender.com/api/v1/softwareApplication/delete/${id}`,
         {
           withCredentials: true,
         }

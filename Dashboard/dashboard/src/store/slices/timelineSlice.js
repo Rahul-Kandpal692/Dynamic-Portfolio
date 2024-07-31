@@ -93,7 +93,7 @@ export const getAllTimeline=()=>async(dispatch)=>{
     dispatch(timelineSlice.actions.getAllTimelineRequest());
     try {
         const {data}=await axios.get(
-            "http://localhost:4000/api/v1/timeline/getall",
+            "https://dynamic-portfolio-backend-essm.onrender.com/api/v1/timeline/getall",
             {withCredentials:true}
         );
         dispatch(timelineSlice.actions.getAllTimelineSucess(data.timelines));
@@ -107,7 +107,7 @@ export const addTimeline=(newData)=>async(dispatch)=>{
     dispatch(timelineSlice.actions.addTimelineRequest());
     try {
         const {data}=await axios.post(
-            "http://localhost:4000/api/v1/timeline/add",
+            "https://dynamic-portfolio-backend-essm.onrender.com/api/v1/timeline/add",
             newData,
             {
                 withCredentials:true, 
@@ -126,7 +126,7 @@ export const deleteTimeline=(id)=>async(dispatch)=>{
     dispatch(timelineSlice.actions.deleteTimelineRequest());
     try {
         const {data}=await axios.delete(
-            `http://localhost:4000/api/v1/timeline/delete/${id}`,
+            `https://dynamic-portfolio-backend-essm.onrender.com/api/v1/timeline/delete/${id}`,
             {
                 withCredentials:true,
             }

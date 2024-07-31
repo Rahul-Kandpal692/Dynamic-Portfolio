@@ -7,7 +7,7 @@ const Skills = () => {
   useEffect(()=>{
     const fetchSkills=async()=>{
         try {
-            const {data} = await axios.get("http://localhost:4000/api/v1/skill/getall",{withCredentials:true});
+            const {data} = await axios.get("https://dynamic-portfolio-backend-essm.onrender.com/api/v1/skill/getall",{withCredentials:true});
             setSkills(data.skills);
             // console.log(data)
         } catch (error) {

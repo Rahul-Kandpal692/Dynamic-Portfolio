@@ -7,7 +7,7 @@ const MyApps = () => {
   useEffect(()=>{
     const fetchApps=async()=>{
         try {
-            const {data} = await axios.get("http://localhost:4000/api/v1/softwareApplication/getall",{withCredentials:true});
+            const {data} = await axios.get("https://dynamic-portfolio-backend-essm.onrender.com/api/v1/softwareApplication/getall",{withCredentials:true});
             setApps(data.applications);
             // console.log(data)
         } catch (error) {

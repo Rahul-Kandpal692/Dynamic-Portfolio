@@ -113,7 +113,7 @@ const projectSlice = createSlice({
 export const getAllprojects=()=>async(dispatch)=>{
     dispatch(projectSlice.actions.getAllProjectRequest());
     try {
-      const {data} = await axios.get("http://localhost:4000/api/v1/project/getall", {
+      const {data} = await axios.get("https://dynamic-portfolio-backend-essm.onrender.com/api/v1/project/getall", {
         withCredentials: true,
       });
       dispatch(projectSlice.actions.getAllProjectSuccess(data.projects));
@@ -128,7 +128,7 @@ export const getSingleproject=(id)=>async(dispatch)=>{
     dispatch(projectSlice.actions.getSingleProjectRequest());
     try {
         const {data} = await axios.get(
-            `http://localhost:4000/api/v1/project/get/${id}`,
+            `https://dynamic-portfolio-backend-essm.onrender.com/api/v1/project/get/${id}`,
             {withCredentials: true,});
 
 
@@ -145,7 +145,7 @@ export const addProject=(newData)=>async(dispatch)=>{
     dispatch(projectSlice.actions.addProjectRequest());
     try {
         const {data} = await axios.post(
-            "http://localhost:4000/api/v1/project/add",
+            "https://dynamic-portfolio-backend-essm.onrender.com/api/v1/project/add",
             newData,
             {
                 withCredentials: true,
@@ -167,7 +167,7 @@ export const deleteProject=(id)=>async(dispatch)=>{
     dispatch(projectSlice.actions.deleteProjectRequest());
     try {
         const {data} = await axios.delete(
-            `http://localhost:4000/api/v1/project/delete/${id}`,
+            `https://dynamic-portfolio-backend-essm.onrender.com/api/v1/project/delete/${id}`,
             {
                 withCredentials: true,
                 // headers: { "Content-Type": "multipart/form-data" },
@@ -188,7 +188,7 @@ export const updateProject=(id,newData)=>async(dispatch)=>{
     dispatch(projectSlice.actions.updateProjectRequest());
     try {
         const {data} = await axios.put(
-            `http://localhost:4000/api/v1/project/update/${id}`,
+            `https://dynamic-portfolio-backend-essm.onrender.com/api/v1/project/update/${id}`,
             newData,
             {
                 withCredentials: true,

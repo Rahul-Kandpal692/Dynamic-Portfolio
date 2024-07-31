@@ -95,7 +95,7 @@ const skillSlice = createSlice({
 export const getAllSkill=()=>async(dispatch)=>{
     dispatch(skillSlice.actions.getSkillRequest());
   try {
-    const { data } = await axios.get("http://localhost:4000/api/v1/skill/getall", {
+    const { data } = await axios.get("https://dynamic-portfolio-backend-essm.onrender.com/api/v1/skill/getall", {
       withCredentials: true,
     });
     dispatch(skillSlice.actions.getSkillSuccess(data.skills));
@@ -111,7 +111,7 @@ export const addSkill=(newData)=>async(dispatch)=>{
     dispatch(skillSlice.actions.addSkillRequest());
     try {
         const {data}=await axios.post(
-            "http://localhost:4000/api/v1/skill/add",
+            "https://dynamic-portfolio-backend-essm.onrender.com/api/v1/skill/add",
             newData,
             {
                 withCredentials: true,
@@ -130,7 +130,7 @@ export const updateSkill=(id,proficiency)=>async(dispatch)=>{
     dispatch(skillSlice.actions.updateSkillRequest());
     try {
         const {data}=await axios.put(
-            `http://localhost:4000/api/v1/skill/update/${id}`,
+            `https://dynamic-portfolio-backend-essm.onrender.com/api/v1/skill/update/${id}`,
             {proficiency},
             {
                 withCredentials: true,
@@ -150,7 +150,7 @@ export const deleteSkill=(id)=>async(dispatch)=>{
     dispatch(skillSlice.actions.deleteSkillRequest());
     try {
         const {data}=await axios.delete(
-            `http://localhost:4000/api/v1/skill/delete/${id}`,
+            `https://dynamic-portfolio-backend-essm.onrender.com/api/v1/skill/delete/${id}`,
 
             {
                 withCredentials: true,

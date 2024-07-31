@@ -62,7 +62,7 @@ export const  getAllMessage =()=>async(dispatch)=>{
     dispatch(messageSlice.actions.getAllMessagesRequest());
     try {
         const response = await axios.get(
-            "http://localhost:4000/api/v1/message/getall",
+            "https://dynamic-portfolio-backend-essm.onrender.com/api/v1/message/getall",
             {withCrenditials:true}
         );
         dispatch(messageSlice.actions.getAllMessagesSuccess(response.data.messages))
@@ -77,7 +77,7 @@ export const  getAllMessage =()=>async(dispatch)=>{
 export const deleteMessage=(id)=>async(dispatch)=>{
     dispatch(messageSlice.actions.deleteMessageRequest());
     try {
-        const response=await axios.delete(`http://localhost:4000/api/v1/message/delete/${id}`,{ withCredentials: true})
+        const response=await axios.delete(`https://dynamic-portfolio-backend-essm.onrender.com/api/v1/message/delete/${id}`,{ withCredentials: true})
         dispatch(messageSlice.actions.deleteMessageSuccess(response.data.message))
         dispatch(messageSlice.actions.clearAllErrors());
     } catch (error) {
