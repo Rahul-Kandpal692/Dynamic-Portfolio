@@ -56,7 +56,7 @@ const UpdateProfile = () => {
         formData.append("portfolioURL", portfolioURL);
         formData.append("linkedInURL", linkedInURL);
         formData.append("githubURL", githubURL);
-        formData.append("DSAUL",DSAURL);
+        formData.append("DSAURL",DSAURL);
         formData.append("avatar", avatar);
         formData.append("resume", resume);
         dispatch(updateProfile(formData));

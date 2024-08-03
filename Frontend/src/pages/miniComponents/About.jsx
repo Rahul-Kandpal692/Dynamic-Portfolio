@@ -26,7 +26,7 @@ const About = () => {
               <img src={user.avatar&&user.avatar.url} alt={user.fullName} className='bg-gray-500 p-2 sm:p-1 h-[300px] sm:rounded-lg sm:h-[340px] rounded-lg md:h-[450px] lg:h-[450px]'></img>
             </div>
             <div className='flex flex-col justify-center tracking-[1px] text-xl gap-5'>
-              <p>Presently I am pursing my Degree in Computer Science and Engineering Throughout my acadamic Journery I have built strong foundation in programming, problem solving and software development.</p>
+              <p>Presently I am pursing my Degree in Computer Science and Engineering. Throughout my academic journey I have built strong foundation in programming, problem solving and software development.</p>
               <p>I am actively seeking exciting new hiring opportunities where I can leverage my skills and experiences to contribute meaningfully to an organization. I am eager to explore roles that align with my professional goals. I would be thrilled to connect and discuss how I can bring value to your team.</p>
             </div>
           </div>

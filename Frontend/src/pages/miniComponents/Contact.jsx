@@ -69,7 +69,7 @@ const Contact = () => {
             <Input
               value={senderEmail}
               onChange={(e) => setSenderEmail(e.target.value)}
-              placeholder="Your Name"
+              placeholder="Your Email"
             />
             </div>
           </div>

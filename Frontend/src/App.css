@@ -4,13 +4,13 @@
   font-family: "Dancing Script", cursive;
 }
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
   background: #d1e5ff;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#642bff, #ff22e6);
+  background: linear-gradient(#e3dafd, #0f0d15);
   border-radius: 7px;
 }
 .text-tubeLight-effect {
@@ -73,6 +73,13 @@
   100% {
     text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
   }
+}
+
+#particles canvas{
+  z-index:-1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 

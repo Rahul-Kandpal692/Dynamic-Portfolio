@@ -8,6 +8,7 @@ import Footer from './pages/Footer'
 import { ModeToggle } from './components/mode-toggle'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ParticleBg from './pages/miniComponents/ParticleBg'
 
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
 
   return (
     <>
+    
      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <ParticleBg  id="particles"></ParticleBg>
       <Router>
         <ModeToggle classname="bg-white"/>
         <Routes>
